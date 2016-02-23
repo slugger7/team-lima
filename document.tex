@@ -355,6 +355,50 @@ This section discusses the application functionality required by users (and othe
 			\end{itemize}
 	\end{itemize}
 
+\subsubsection{Nice-to-Have}
+	Users are authors by default for research papers that they adminstrate. If the user is only an administrator they should explicitly mark them self as administrator only
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User needs to be registered on the system
+				\item User needs to be an administrator of a research paper or
+				\item User needs to be the primary author of a research paper
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item User can remove themself as an author and only be an adminstrator of the research paper.
+			\end{itemize}
+		\item Exceptions
+			\begin{itemize}
+				\item Super user is an administrator on all research papers.
+			\end{itemize}
+	\end{itemize}
+
+	Indication of progress on research papers
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item The system needs to have a research paper that has active authors
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item There is a progress bar of how much work is done on that research paper before the research paper is completed.
+			\end{itemize}
+	\end{itemize}
+
+	Users should be able to search for other authors
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User should be registered on the system
+				\item Other users should be registered on the system
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item User has the ability to search in the system for other users/authors.
+			\end{itemize}
+	\end{itemize}
+
 \newpage
 \section{References}
 
