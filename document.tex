@@ -149,6 +149,8 @@ For further references see \href{https://https://github.com/slugger7/team-lima}{
 
 \newpage
 \section{Functional requirements and application design}
+This section discusses the application functionality required by users (and other stakehodlers).
+
 \subsection{Use case prioritization}
 \subsubsection{Critical}
 	\begin{itemize}
@@ -176,6 +178,228 @@ For further references see \href{https://https://github.com/slugger7/team-lima}{
 		\item There should be a checkbox that defaults users as authors for research papers that they administrate, if they are just administrating they should explicitly uncheck that they are not an author.
 		\item There should be an indication of progress on research papers (progress bar/precentage indication of work done)
 		\item Users should be able to search for authors if they have been stored in the system.
+	\end{itemize}
+
+\subsection{Use case/Service Contracts}
+\subsubsection{Critical}
+	Handle 100 users concurrently
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item System needs to be online.
+				\item Users need to connect to the system.
+				\item System needs to have concurrency controls to help aid 100 users at the maximum.
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item System can successfully maintain the concurrent use of 100 users.
+			\end{itemize}
+	\end{itemize}
+
+	Only UP staff members may register to become users
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User needs to be registered at the University of Pretoria.
+				\item User needs a valid staff number from the University of Pretoria.
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item User that is now registered on the system may now add research projects and so forth.
+			\end{itemize}
+	\end{itemize}
+
+	The superuser account
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User needs to be a staff member at the University Of Pretoria.
+				\item User needs to be the head of the department.
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item Super user can see all research papers on the system.
+				\item Super user has control of the whole system.
+			\end{itemize}
+	\end{itemize}
+
+\subsubsection{Important}
+	Users can add and remove authors
+	\begin{itemize}
+		\item Pre-condition
+			\begin{itemize}
+				\item User has to be registered on the system.
+				\item User has to be the primary author on a research paper that they want to add and remove other authors to and from.
+			\end{itemize}
+		\item Post-condition
+			\begin{itemize}
+				\item User can add and remove authors from the research paper that they are the primary author on.
+			\end{itemize}
+	\end{itemize}
+
+	Users decide when the deadline of a research paper is.
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item Users need to be registered on the system.
+				\item Users need to be a primary author on a research paper for which they want to set a deadline.
+				\item Deadline cannot be in the past.
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item Deadline is set on the research paper
+				\item All co-authors are notified via email what the deadline on that research paper is.
+			\end{itemize}
+	\end{itemize}
+
+	Users can terminate and revive a research paper
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User needs to be registered on the system.
+				\item User needs to be the primary author on the research paper which needs to be terminated or revived.
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item The selected research paper is terminated or revived.
+				\item All co-authors are notified via email that the research paper is terminated or revived.
+			\end{itemize}
+		\item Exceptions
+			\begin{itemize}
+				\item Superuser also has control over any users research paper.
+			\end{itemize}
+	\end{itemize}
+
+	Users can edit details about a research paper they are involved in
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User has to be registered on the system
+				\item User has to be added to the research paper or be the primary author
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item The details of the research paper can be edited by the author
+				\item All co-autors can see the edited details of the research paper
+			\end{itemize}
+	\end{itemize}
+
+	User profiles should show the total accumulated units
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User has to be registered on the system
+				\item User needs to be involved on a research paper
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item Users profile will show the total accumulated units of contributions
+			\end{itemize}
+	\end{itemize}
+
+	The system has to log everyting
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item System has to be online
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item Everyting that any user does on the system is added to a log
+			\end{itemize}
+	\end{itemize}
+
+	Users must be abel to enter historical data
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User must be registered on the system
+				\item User must be involved with a research paper
+				\item There must be a previously completed research paper on which historical data needs to be entered.
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item Historical data is added to the previously completed research paper.
+				\item All co-autors can see this historical data that has been added about the previously completed research paper.
+			\end{itemize}
+	\end{itemize}
+
+	Every research paper only has one primary author
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User needs to be registered on the system.
+				\item User has to be the creator of the research paper
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item User becomes the primary author on the research paper
+			\end{itemize}
+		\item Exceptions
+			\begin{itemize}
+				\item User that used to be the primary author hands the research paper over to one of the co-authors to become the primary author.
+			\end{itemize}
+	\end{itemize}
+
+	Co-authors are added and sequenced
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item Co-authors need to be registerd on the system.
+				\item The primary author needs to specify which authors to add to the research paper.
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item Co-authors are added to the research paper and sequenced in a hierarchy.
+			\end{itemize}
+		\item Exceptions
+			\begin{itemize}
+				\item All primary authors fall under the super user.
+			\end{itemize}
+	\end{itemize}
+
+\subsubsection{Nice-to-Have}
+	Users are authors by default for research papers that they adminstrate. If the user is only an administrator they should explicitly mark them self as administrator only
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User needs to be registered on the system
+				\item User needs to be an administrator of a research paper or
+				\item User needs to be the primary author of a research paper
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item User can remove themself as an author and only be an adminstrator of the research paper.
+			\end{itemize}
+		\item Exceptions
+			\begin{itemize}
+				\item Super user is an administrator on all research papers.
+			\end{itemize}
+	\end{itemize}
+
+	Indication of progress on research papers
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item The system needs to have a research paper that has active authors
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item There is a progress bar of how much work is done on that research paper before the research paper is completed.
+			\end{itemize}
+	\end{itemize}
+
+	Users should be able to search for other authors
+	\begin{itemize}
+		\item Pre-conditions
+			\begin{itemize}
+				\item User should be registered on the system
+				\item Other users should be registered on the system
+			\end{itemize}
+		\item Post-conditions
+			\begin{itemize}
+				\item User has the ability to search in the system for other users/authors.
+			\end{itemize}
 	\end{itemize}
 
 \newpage
