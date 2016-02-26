@@ -97,7 +97,7 @@ u13230795
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
-Npntokozo
+Nontokozo {Hlastwayo}
 \end{flushleft}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
@@ -108,13 +108,13 @@ u14414555
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
-Unknown
+Tim Kirker
 \end{flushleft}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{} \\
-Unknown
+u11152402
 \end{flushright}
 \end{minipage}
 \vfill
@@ -146,10 +146,74 @@ For further references see \href{https://https://github.com/slugger7/team-lima}{
 
 \newpage
 \section{Architecture requirements}
+\subsection{Access channel requirements}
+
+\subsection{Quality requirements}
+
+
+In order to create a safe and legit system that will meet all the specifications of the project, some system requirements like how the system performance, security, flexiblity, maintainability, auditablity, integrability, cost and usabilty.
+
+\subsubsection{Performance} 
+
+The system has to responsive, and responsive enough to handle up to one hundred users and not lag, the system must also be perform in such a way that if certain authors responsible for a paper want to access it at the same time them can without the system slowing down.
+
+\subsubsection{Security} 
+
+The most important securty measure that needs to held in this system is that only U.P staff  and only U.P staff are allowed to use the system. Only U.P staff are allowed to register as users.They will set they own username or use they access card numbers as a username. They will also set they own password. This password should be adleast eight characters long to make it difficult.If the user forgets his/her password, the need to be a way of retrieving it or setting a new password. Me and my group decided that an email should be sent to you with a link of setting of setting a new passowrd. If a users also fails to get the correct password for more that three tries, the user account should be blocked for safety reasons, and the users should be sent a email to reset or retrieve password. If system fails to allow user back into the system , the user needs to enquire to the administative user. The system will also have user profiles, only the user is allowed to edit his/her profile. Users are also in control of their papers that they publish, the have controlto terminae them, reject papers building on their papers. Only users involved in the publication can edit a paper, this modification must be known by the other users invloved in he same paper. The system also has super-users that have more control then users, they can access all publications and can remove and add users to the system, they can also view the activities of a particular user and because of this users activities and log ins must be logged. The hierachy of this system in terms of privalage is that super-users have the most authority, users have more authority than researchers.
+
+\subsubsection{Reliability}
+
+Reliability for this application to work is crucial to its success. If a user wants to access a paper and its urgent, the user must always be able to access what they have access to atb all time without the system failing fetch the file the user whats to view. Reliability includes keeping all users equal, the system cant ever loose track of what authority each user has on the system. Super-users must be able to do all their administrative jobs, if that could fail then they wouldnt be abble to keep track of user activity and the application. 
+
+\subsubsection{Flexability}
+
+This application should be web-based and should also have a mobile application that users can user when away from a desktop or laptop. The system needs to be able to run the same on all these platforms and users must be able to do the same things on the web-based application and mobile-based application. For the mobile side of things, this application needs to be able to support older versions of android mobile system, so that no matter the device that is being used, you as the user can access the application and look up what you nedd to at all time.
+
+\subsubsection{Maintainability}
+
+Maintainance of this application will be handled by the super-users. With over one hundred users this system will have to be well maintained to be able to run things smoothly.
+
+\subsubsection{Monitorability}
+
+The super-users will be incharge of monitoring users activity. Since there will be a log for each users activity on the system, the super user can look at the log to see what a specific user has been doing. Everything in the system will be logged to increase the level of monitorability.
+
+\subsubsection{Usability}
+
+This application should be simple enough for a user to use without the user asking for asssistance more than once. The system must have basic instruction, maybe given to the user on a basic pdf file that they can read and understand how to navigate the system. If users still dont have a clear perspective on how the system work they will just keep referring to the pdf.
+
+\subsubsection{Cost}
+
+The system being built should be complex enough to run smoothly on all devices but also it should be maintainable by students to cut costs and man hours.
+
+\subsubsection{Integrability}
+
+The system should be intergateable to mobile devices and not just be web-based. Theres will be a mobile application for this sytem.
+
+
+\subsection{Intergation requirements}
+
+
+
+\subsection{Architecture constraints}
+
+The server should be available at all times to allow all users to login at anytime. There should be search functionality to allow users to navigate faster.The system will be web-based and will also built to to run on mobile devices.
+
+\subsubsection{Web-based development}
+
+We will be building the web-based system using html, css, and some javascript for some user side functionality. We will do all client validation using javascript to check if what the user inputted is corect.  
+
+\subsubsection{Server side development}
+
+To run the database we will be using mySQL and php. We will store the user profile using a mySQL database and use, and all vaildation will be done in php.
+
+
+\subsubsection{Mobile application development}
+
+To build the mobile application, we will be using androidStudio(java). The mobile application should only be able to access the server when you are withing the premises of the University.
 
 \newpage
 \section{Functional requirements and application design}
-This section discusses the application functionality required by users (and other stakehodlers).
+This section discusses the application functionality required by users (and other stakeholders).
 
 \subsection{Use case prioritization}
 \subsubsection{Critical}
@@ -164,12 +228,12 @@ This section discusses the application functionality required by users (and othe
 \subsubsection{Important}
 	\begin{itemize}
 		\item Users(UP staff) can add and remove authors.
-		\item Users(UP staff) decide when the deadline of a reasearch project is.
+		\item Users(UP staff) decide when the deadline of a research project is.
 		\item Users(UP staff) can terminate a research project and revive a terminated research project.
 		\item A user can edit the details about a research project that they are involved in.
 		\item User profiles should show the total accumulated units.
 		\item The system has to log everything.
-		\item Users must be able to enter historical data (previosly completed research projects).
+		\item Users must be able to enter historical data (previously completed research projects).
 		\item Every research project only has one primary author.
 		\item Co-authors are added and sequenced.
 	\end{itemize}
@@ -177,7 +241,7 @@ This section discusses the application functionality required by users (and othe
 \subsubsection{Nice-To-Have}
 	\begin{itemize}
 		\item There should be a checkbox that defaults users as authors for research projects that they administrate, if they are just administrating they should explicitly uncheck that they are not an author.
-		\item There should be an indication of progress on research projects (progress bar/precentage indication of work done)
+		\item There should be an indication of progress on research projects (progress bar/percentage indication of work done)
 		\item Users should be able to search for authors if they have been stored in the system.
 	\end{itemize}
 
@@ -295,7 +359,7 @@ This section discusses the application functionality required by users (and othe
 		\item Post-conditions
 			\begin{itemize}
 				\item The details of the research paper can be edited by the author.
-				\item All co-autors can see the edited details of the research paper.
+				\item All co-authors can see the edited details of the research paper.
 			\end{itemize}
 	\end{itemize}
 
@@ -312,7 +376,7 @@ This section discusses the application functionality required by users (and othe
 			\end{itemize}
 	\end{itemize}
 
-	The system has to log everyting
+	The system has to log everything
 	\begin{itemize}
 		\item Pre-conditions
 			\begin{itemize}
@@ -320,11 +384,11 @@ This section discusses the application functionality required by users (and othe
 			\end{itemize}
 		\item Post-conditions
 			\begin{itemize}
-				\item Everyting that any user does on the system is added to a log.
+				\item Everything that any user does on the system is added to a log.
 			\end{itemize}
 	\end{itemize}
 
-	Users must be abel to enter historical data
+	Users must be able to enter historical data
 	\begin{itemize}
 		\item Pre-conditions
 			\begin{itemize}
@@ -360,7 +424,7 @@ This section discusses the application functionality required by users (and othe
 	\begin{itemize}
 		\item Pre-conditions
 			\begin{itemize}
-				\item Co-authors need to be registerd on the system.
+				\item Co-authors need to be registered on the system.
 				\item The primary author needs to specify which authors to add to the research project.
 			\end{itemize}
 		\item Post-conditions
@@ -370,7 +434,7 @@ This section discusses the application functionality required by users (and othe
 	\end{itemize}
 
 \subsubsection{Nice-to-Have}
-	Users are authors by default for research projects that they adminstrate. If the user is only an administrator they should explicitly mark them self as administrator only
+	Users are authors by default for research projects that they administrate. If the user is only an administrator they should explicitly mark them self as administrator only
 	\begin{itemize}
 		\item Pre-conditions
 			\begin{itemize}
@@ -380,7 +444,7 @@ This section discusses the application functionality required by users (and othe
 			\end{itemize}
 		\item Post-conditions
 			\begin{itemize}
-				\item User can remove themself as an author and only be an adminstrator of the research project.
+				\item User can remove themselves as an author and only be an administrator of the research project.
 			\end{itemize}
 		\item Exceptions
 			\begin{itemize}
@@ -565,6 +629,8 @@ This section discusses the application functionality required by users (and othe
 \end{figure}
 
 \newpage
+
+
 \section{References} 
 
 \end{document}
