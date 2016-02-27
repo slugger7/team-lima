@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\title{\Huge Client Specification}
+\date{02-17-2016}
+\author{team-lima}
+
+\begin{document}
+	\maketitle
+	\newpage
+
+	\section{Purpose}
+	\begin{itemize}
+		\item Allows researchers to keep track of publications,
+		\item Research leaders to know what is going on with the research group
+	\end{itemize}
+
+	\section{Users}
+	\begin{itemize}
+		\item Potential number of users would be around 100
+		\item The system must be able to serve all 100 users concurrently
+		\item Only UP staff members can register to be users
+		\item Users can add and remove authors
+		\item Decides when the deadline is
+		\item User profile should show total accumulated units (will be explained)
+		\item Can terminate a paper and revive a terminated publication
+		\item Checkbox that defaults them as authors for papers they admin(have to explicitly uncheck if they are not authors)
+		\item User can edit details about publication he/she is involved in
+		\item User is only allowed to see publications they are involved in
+		\item There should be a superuser to cater for the Head of Department, this superuser should be able to see every publication that is on the system
+	\end{itemize}
+	\Large Hierarchy: \normalsize
+	superuser((HoD)) -\textgreater  user((UP Staff)) -\textgreater  author/researcher\\
+	\\
+	\Large Scenario: \normalsize A research group may consist of several students and perhaps a researcher from another university. The UP staff member involved should then take the admin role and be the “user” in this case, the rest of the individuals involved in the publication are then added as authors but they are not users (unless they are UP staff and they have registered on the system).\\
+
+	\large NB: Imprtant to note the distinction between users and authors - user can be an author but not vice-versa \normalsize \\ \\
+	System
+	\begin{itemize}
+		\item A publication may belong to more than one research group\\
+			Publication
+			\begin{itemize}
+				\item Title
+				\item Authors(sorted in sequence)
+				\item Type of paper(can be changed from one type to another)
+				\item Inteded venue
+				\item Units the paper is worth
+			\end{itemize}
+		//There is a system wherein researchers are given units for the papers they submit to conferences. User units=Conference units/ no. of authors
+		\item The sstem has to log everything
+		\item Must be possible to enter historical data(previously completed publications)
+		\item An e-mail reminder must be sent to notify authors about due date
+		\item System should have a web interface as well as an android app
+		\item there won't be any actual documents on the system, it will only contain metadata of the publications
+	\end{itemize}
+
+	Metadata
+	\begin{itemize}
+		\item Title
+		\item Authors
+		\item Dates (due date, publication/conference date)
+		\item Indication of progress(progress bar/ percentage indication how much has been done)
+	\end{itemize}
+
+	Authors/Researchers
+	\begin{itemize}
+		\item Authors are stored into the system but not registered as users\\
+			What to store
+			\begin{itemize}
+				\item Name
+				\item Contact Details
+				\item Initials
+				\item Institution
+				\item Position(optional)
+				\item Staff number/student number(optional)
+			\end{itemize}
+			These can all be text fields
+		\item Users should be able to search for authors if they have been stored in the system
+		\item There is one primary author for each publication
+		\item Many other co-authors are added and sequenced
+		\item e.g. Lets say Tim, Ntoko and Kevin are working on the publication
+		\begin{itemize}
+			\item Tim is the primary author for this publication
+			\item Ntoko would be the 2nd author
+			\item and Kevin would be the 3rd author, and so on ...
+		\end{itemize}
+	\end{itemize}
+\end{document}
