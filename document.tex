@@ -7,10 +7,11 @@
 \makeindex
 
 \usepackage{longtable}
-\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
 \usepackage{makeidx}
 \usepackage{hyperref}
 \usepackage{verbatim}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -210,7 +211,7 @@ In order to create a safe and legit system that will meet all the specifications
 The system has to responsive, and responsive enough to handle up to one hundred users and not lag, the system must also be perform in such a way that if certain authors responsible for a paper want to access it at the same time them can without the system slowing down.
 
 \subsubsection{Security}
-The most important security measure that needs to held in this system is that only U.P staff are allowed to register as users.They will either set their own usernames or use their access card numbers in place of their usernames. They will also be required to set their own passwords. This password should be at least eight characters long to make it a bit more difficult for potential hackers to gain access.If a user forgets his/her password, there will need to be a way of retrieving it or re-setting a new one. My group and I decided that an email containing a link should be sent out to a user directing them to a page wherein they will be able to set a new password. If a user also fails to get the correct password for more than three tries, the user account should be blocked for safety reasons, and the user should be sent an email following the password re-setting procedure. If system fails to allow a user back into the system, the user needs to direct an enquiry to the administative user. The system will also have user profiles, a user can only edit their own profile. Users are also in control of the papers they are involved in, they have the authority to add & terminate publications, add/remove authors from publications and so on. Only users involved in the publication can edit a paper, this modification must be known by the other users involved in the same paper. The system also has super-users that have more control then users, they can access all publications and remove/add users to the system. They can also view the activities of a particular user and because of this, all user activity must be logged. The hierarchy of this system in terms of privilege is that super-users have the most authority, users have more authority, leaving authors at the bottom of the pyramid.
+The most important security measure that needs to held in this system is that only U.P staff are allowed to register as users.They will either set their own usernames or use their access card numbers in place of their usernames. They will also be required to set their own passwords. This password should be at least eight characters long to make it a bit more difficult for potential hackers to gain access.If a user forgets his/her password, there will need to be a way of retrieving it or re-setting a new one. My group and I decided that an email containing a link should be sent out to a user directing them to a page wherein they will be able to set a new password. If a user also fails to get the correct password for more than three tries, the user account should be blocked for safety reasons, and the user should be sent an email following the password re-setting procedure. If system fails to allow a user back into the system, the user needs to direct an enquiry to the administative user. The system will also have user profiles, a user can only edit their own profile. Users are also in control of the papers they are involved in, they have the authority to add \& terminate publications, add/remove authors from publications and so on. Only users involved in the publication can edit a paper, this modification must be known by the other users involved in the same paper. The system also has super-users that have more control then users, they can access all publications and remove/add users to the system. They can also view the activities of a particular user and because of this, all user activity must be logged. The hierarchy of this system in terms of privilege is that super-users have the most authority, users have more authority, leaving authors at the bottom of the pyramid.
 
 \subsubsection{Reliability}
 
@@ -539,176 +540,218 @@ This section discusses the application functionality required by users (and othe
 
 \newpage
 
-\begin{figure}[ht]
 \subsection{Required functionality}
 \subsubsection{Critical use cases}
-\includegraphics[scale=0.5]{./images/uc__registerUser.jpg}
-\caption{Only UP staff members may register to become users}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__registerUser.jpg}
+	\begin{center}
+		Only UP staff members may register to become users
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/uc__registerSuperuser.jpg} 
-\caption{Creating the super user account}
+	\includegraphics[scale=0.5]{./images/uc__registerSuperuser.jpg}
+	\begin{center}
+		Creating the super user account
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
 
-\includegraphics[scale=0.5]{./images/uc__uploadDocument.jpg}
-\caption{Users should be able to upload their documents} 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__uploadDocument.jpg}
+	\begin{center}
+		Users should be able to upload their documents
+	\end{center}
+\end{flushleft}
 
-
-\end{figure}
-\begin{figure}[ht]
+\newpage
 \subsubsection{Important use cases}
-\includegraphics[scale=0.5]{./images/uc__editAuthors.jpg} 
-\caption{Users can add and remove authors}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__editAuthors.jpg}
+	\begin{center}
+		Users can add and remove authors
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/uc__setDeadline.jpg} 
-\caption{Users decide the deadline of a research project}
-\end{figure}
+	\includegraphics[scale=0.5]{./images/uc__setDeadline.jpg}
+	\begin{center}
+		Users decide the deadline of a research project
+	\end{center}
+\end{flushleft}
+
 \newpage
-\begin{figure}[ht]
-\includegraphics[scale=0.5]{./images/uc__validate_primary_authorship__terminateRevivePaper.jpg} 
-\caption{Users can terminate and revive a research project}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__validate_primary_authorship__terminateRevivePaper.jpg}
+	\begin{center}
+		Users can terminate and revive a research project
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/uc__notify_co-authors_of_change__editPaperDetails.jpg} 
-\caption{Users can edit details about a research paper they are involved in}
+	\includegraphics[scale=0.5]{./images/uc__notify_co-authors_of_change__editPaperDetails.jpg}
+	\begin{center}
+		Users can edit details about a research paper they are involved in
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
-\includegraphics[scale=0.5]{./images/uc__changeUserPaperCount.jpg} 
-\caption{User profiles should show the total accumulated units}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__changeUserPaperCount.jpg} 
+	\begin{center}
+		User profiles should show the total accumulated units
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/uc__editHistory.jpg} 
-\caption{Users must be able to enter historical data}
+	\includegraphics[scale=0.5]{./images/uc__editHistory.jpg}
+	\begin{center}
+		Users must be able to enter historical data
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
-\includegraphics[scale=0.5]{./images/uc__addCoAuthor.jpg} 
-\caption{Co-authors are added and sequenced}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__addCoAuthor.jpg} 
+	\begin{center}
+		Co-authors are added and sequenced
+	\end{center}
+\end{flushleft}
 
-\end{figure}
-
-\begin{figure}[ht]
 \subsubsection{Nice-to-have use cases}
-\includegraphics[scale=0.5]{./images/uc__markAsAdministrator.jpg} 
-\caption{Users can be marked as administrators only}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__markAsAdministrator.jpg}
+	\begin{center}
+		Users can be marked as administrators only
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/uc__checkPaperProgress.jpg} 
-\caption{Indication of progress on research project}
+	\includegraphics[scale=0.5]{./images/uc__checkPaperProgress.jpg} 
+	\begin{center}
+		Indication of progress on research project
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
 
-\includegraphics[scale=0.5]{./images/uc__searchUsers.jpg} 
-\caption{Users should be able to search for other authors}
-\end{figure}
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/uc__searchUsers.jpg} 
+	\begin{center}
+		Users should be able to search for other authors
+	\end{center}
+\end{flushleft}
 
-\begin{figure}
 \subsection{Process specifications}
 \subsubsection{Critical use cases}
-\includegraphics[scale=0.5]{./images/act__registerUser__registerUser.jpg} 
-\caption{Only UP staff members may register to become users}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__registerUser__registerUser.jpg} 
+	\begin{center}
+		Only UP staff members may register to become users
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/act__registerSuperuser__setDeadline.jpg} 
-\caption{Creating the super user account}
+	\includegraphics[scale=0.5]{./images/act__registerSuperuser__setDeadline.jpg} 
+	\begin{center}
+		Creating the super user account
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__uploadDocument.jpg} 
+	\begin{center}
+		Users should be able to upload their documents
+	\end{center}
+\end{flushleft}
 
-\includegraphics[scale=0.5]{./images/act__uploadDocument.jpg} 
-\caption{Users should be able to upload their documents}
-
-
-\end{figure}
-\begin{figure}[ht]
 \subsubsection{Important use cases}
-\includegraphics[scale=0.5]{./images/act__editAuthors__editAuthors.jpg} 
-\caption{Users can add and remove authors}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__editAuthors__editAuthors.jpg} 
+	\begin{center}
+		Users can add and remove authors
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/setDeadline.jpg} 
-\caption{Users decide the deadline of a research project}
-\end{figure}
+	\includegraphics[scale=0.5]{./images/setDeadline.jpg} 
+	\begin{center}
+		Users decide the deadline of a research project
+	\end{center}
+\end{flushleft}
+
 \newpage
-\begin{figure}[ht]
-\includegraphics[scale=0.5]{./images/act__terminateRevivePaper__terminateRevivePaper.jpg} 
-\caption{Users can terminate and revive a research project}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__terminateRevivePaper__terminateRevivePaper.jpg} 
+	\begin{center}
+		Users can terminate and revive a research project
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/act__editPaperDetails__editPaperDetails.jpg} 
-\caption{Users can edit details about a research paper they are involved in}
+	\includegraphics[scale=0.5]{./images/act__editPaperDetails__editPaperDetails.jpg} 
+	\begin{center}
+		Users can edit details about a research paper they are involved in
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
-\includegraphics[scale=0.5]{./images/act__changeUserPaperCount__changeUserPaperCount.jpg} 
-\caption{User profiles should show the total accumulated units}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__changeUserPaperCount__changeUserPaperCount.jpg} 
+	\begin{center}
+		User profiles should show the total accumulated units
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/act__editHistory__editHistory.jpg} 
-\caption{Users must be able to enter historical data}
+	\includegraphics[scale=0.5]{./images/act__editHistory__editHistory.jpg} 
+	\begin{center}
+		Users must be able to enter historical data
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
-\includegraphics[scale=0.5]{./images/act__addCoAuthor__addCoAuthor.jpg}  
-\caption{Co-authors are added and sequenced}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__addCoAuthor__addCoAuthor.jpg}  
+	\begin{center}
+		Co-authors are added and sequenced
+	\end{center}
+\end{flushleft}
 
-\end{figure}
-
-\begin{figure}[ht]
 \subsubsection{Nice-to-have use cases}
-\includegraphics[scale=0.5]{./images/act__markAsAdministrator__markAsAdministrator.jpg} 
-\caption{Users can be marked as administrators only}
 
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__markAsAdministrator__markAsAdministrator.jpg} 
+	\begin{center}
+		Users can be marked as administrators only
+	\end{center}
 
-\includegraphics[scale=0.5]{./images/act__checkPaperProgress__checkPaperProgress.jpg} 
-\caption{Indication of progress on research project}
+	\includegraphics[scale=0.5]{./images/act__checkPaperProgress__checkPaperProgress.jpg} 
+	\begin{center}
+		Indication of progress on research project
+	\end{center}
+\end{flushleft}
 
-\end{figure}
 \newpage
-\begin{figure}[ht]
 
-\includegraphics[scale=0.5]{./images/act__searchUsers__searchUsers.jpg} 
-\caption{Users should be able to search for other authors}
+\begin{flushleft}
+	\includegraphics[scale=0.5]{./images/act__searchUsers__searchUsers.jpg} 
+	\begin{center}
+		Users should be able to search for other authors
+	\end{center}
+\end{flushleft}
 
-
-\end{figure}
 \newpage
+
 \section{Open Issues}
 \begin{itemize}
-\item It was never specified whether researchers(non-users) would be able to see the information about the publications they were involved in
-\item Still unclear whether researchers(both users and non-users) will be notified if they are removed from a research group
-\item We are not sure if a user can have multiple sessions open concurrently - if a user is already logged in on the web application, will they be able to log in using their mobile device?
-\item Will the progress be represented by a percentage / a progress bar?
-\item Does the user set the order of the authors or is it automatically set when the user inputs these into a specific document
+	\item It was never specified whether researchers(non-users) would be able to see the information about the publications they were involved in
+	\item Still unclear whether researchers(both users and non-users) will be notified if they are removed from a research group
+	\item We are not sure if a user can have multiple sessions open concurrently - if a user is already logged in on the web application, will they be able to log in using their mobile device?
+	\item Will the progress be represented by a percentage / a progress bar?
+	\item Does the user set the order of the authors or is it automatically set when the user inputs these into a specific document
 
-\item Is there an option that will be provided for how long before a deadline the user will want to receive a notification?
-\item Won't privacy be an issue if researcher(non-user) information is put up and every user - even those not in the same research group - is able to view it?
-\item Will there be different tabs for different types of publications a user is busy with? ie. screens they can switch between to check on articles, Case reports, terminated publications, etc
-\item Will there be a way that research group members can access each other's information so that they can make contact?
-\item What other applications or platforms must this system be able to integrate with?
+	\item Is there an option that will be provided for how long before a deadline the user will want to receive a notification?
+	\item Won't privacy be an issue if researcher(non-user) information is put up and every user - even those not in the same research group - is able to view it?
+	\item Will there be different tabs for different types of publications a user is busy with? ie. screens they can switch between to check on articles, Case reports, terminated publications, etc
+	\item Will there be a way that research group members can access each other's information so that they can make contact?
+	\item What other applications or platforms must this system be able to integrate with?
 \end{itemize}
 
-
-
-\newpage
-
-
-\section{References} 
-
 \end{document}
-
