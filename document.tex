@@ -201,6 +201,10 @@ The system will also improve the current way of storing research metadata the de
 \section{Architecture requirements}
 \subsection{Access channel requirements}
 
+There will be multiple access channels for the proposed system. Mobile/android application clients will be used to fetch data(such as the deadline dates) and integrate them into mobile device for users to easily be able to identify when their deadlines are  for. The mobile application will also allow a user to search for and identify the type of paper(journal, conference paper or book) that is being worked on as well as how many papers a user may be working on. The mobile application will also allow users to see the status of a paper(still working on it, submitted and waiting for feedback, rejected, accepted, published or improving after rejection).
+Web servers will be used in order to store all the users and their details as well as all the papers that are being worked on by any particular user. These web servers will be set up such that 100 users can concurrently access the server without any difficulties. The system will also make due with browser clients that will have all the same functionality as the mobile client and allow any user to access the system where ever they may be. Both the mobile application and browser client will interact with the web server in order to gain access to any information it might need. 
+
+
 \subsection{Quality requirements}
 
 
