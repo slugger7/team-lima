@@ -1,7 +1,0 @@
-#LaTex ignores
-*.pdf
-*.out
-*.idx
-*.aux
-*.synctex.gz
-*.toc
