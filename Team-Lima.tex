@@ -272,6 +272,27 @@ To run the database we will be using mySQL and PHP. We will store the user profi
 
 To build the mobile application, we will use androidStudio(java). The mobile application should only be able to access the server when you are within the premises of the University.
 
+\subsection{Architectural patterns or styles}
+For the architecture pattern to be used as a base we will be using the layering system.
+
+The reason for using the layering system is
+\begin{itemize}
+	\item It is highly pluggable ie. easy to replace a layer
+	\begin{itemize}
+		\item Mobile application layer
+		\item Web page layer
+		\item Desktop application layer
+	\end{itemize}
+	\item Easier to do unit tests on as the other layers are easier to mock
+\end{itemize}
+
+For the presentation layer it will be easier to use MVC architecture in every platform (mobile application, web application, desktop application). Each MVC architecture will be a layer and interchanged for the desired platform.
+
+The reason for using MVC(Model View Controller)
+\begin{itemize}
+
+\end{itemize}
+
 \newpage
 \section{Functional requirements and application design}
 This section discusses the application functionality required by users (and other stakeholders).
