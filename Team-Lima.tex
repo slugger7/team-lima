@@ -277,6 +277,7 @@ For the architecture pattern to be used as a base we will be using the layering 
 
 \subsubsection{Benefits}
 The reason for using the layering system is
+
 \begin{itemize}
 	\item It is highly pluggable ie. easy to replace a layer. This is a crucial part of the program as it has to be available on multiple platforms such as:
 	\begin{itemize}
@@ -290,106 +291,51 @@ The reason for using the layering system is
 
 \subsubsection{Concerns}
 Drawbacks for using layering for this project
+
 \begin{itemize}
 	\item When changing lower layers of the system it impacts all layers above it. Therefore we should create solid base layers that do not need to be updated regularly.
 	\item The above point also raises the point of maintenance. Once a lower layer is updated it reflects all the way to the top layers.
 	\item Performance is impacted because of communication between layers but this simplifies the process of communicating between different top layers as there will be 2 different display or interaction layers.
 \end{itemize}
 	%Going to check the domain model and see what layer should do what
-	\subsubsection{Breakdown of different layers}
-\begin{itemize}
-\item \textbf{Presentation Layer} - This is the layer that contains physical pages and widgets through which the user can interact with the system. 
 
-\begin{itemize}
-\item Also known as the Front-end Layer
-\item In simple terms, it creates and displays the User Interface.
-\item Data that is shown is fetched from the Business Layer.
-\end{itemize}
+\subsubsection{Breakdown of different layers}
 
-\item \textbf{Service Layer} - This serves as a bridge between the Presentation Layer and the Business Layer
+\begin{enumerate}
+	\item \textbf{Presentation Layer} - This is the layer that contains physical pages and widgets through which the user can interact with the system. 
 
-\begin{itemize}
-\item Application layer communicates with the Business Layer via this layer
-\item Third party services can be added in this layer i.e. Can be used to expose a web service API and return results as JSON/XML 
-\item Data is obtained from the Business Layer
-\end{itemize}
+	\begin{itemize}
+		\item Also known as the Front-end Layer
+		\item In simple terms, it creates and displays the User Interface.
+		\item Data that is shown is fetched from the Business Layer.
+	\end{itemize}
 
-\item \textbf{Business Layer} - This layer contains all the business logic
+	\item \textbf{Service Layer} - This serves as a bridge between the Presentation Layer and the Business Layer
 
-\begin{itemize}
-\item CRUD(Create, Retrieve, Update, Delete) operations go here.
-\end{itemize}
+	\begin{itemize}
+		\item Application layer communicates with the Business Layer via this layer
+		\item Third party services can be added in this layer i.e. Can be used to expose a web service API and return results as JSON/XML 
+		\item Data is obtained from the Business Layer
+	\end{itemize}
 
-\item \textbf{Data Access Layer} - This layer contains functionality for database connectivity
+	\item \textbf{Business Layer} - This layer contains all the business logic
+	\begin{itemize}
+		\item CRUD(Create, Retrieve, Update, Delete) operations go here.
+		\item Structure of how users are linked to projects and papers are done in this layer
+		\item Authentication is done on this layer as users should be authenticated before being able to make changes to anything.
+		\item Superuser logic is also added into this layer.
+	\end{itemize}
+
+	\begin{itemize}
+		
+	\end{itemize}
+
+	\item \textbf{Data Access Layer} - This layer contains functionality for database connectivity
 	\begin{itemize}
 		\item Exposes stored data to the Business Layer.
 		\item Responsible for querying the database
 	\end{itemize}
-\end{itemize}
-
-
-\subsubsection{Layering layout}
-\begin{enumerate}
-	\item Visual Layer
-	\begin{itemize}
-		\item Android Application Layer
-		\item Web Application Layer
-	\end{itemize}
-	\item API Layer
-	\item Authentication Layer
-	\item User Layer
-	\item Group Layer
-	\item Project Layer
-	\item System Layer
 \end{enumerate}
-
-\subsubsection{Description of layers}
-\textbf{1.\textbullet) Android Application Layer}
-	This layer will be concerned with running the program on an Android device.
-
-\textbf{1.\textbullet) Web Application Layer}
-	This layer will be concerned with the web application.
-
-\textbf{2. API Layer}
-	This layer will provide an Application Programming Interface for the web and Android application to access the rest of the program. Acts as a translator between the base of the application and the visual applications.
-
-\textbf{3. Authentication Layer}
-	This layer authenticates the user before it can return data from lower down. Without authentication of the user the process will stop at this layer and not continue further.
-
-\textbf{4. User Layer}
-	This layer is concerned with adding new users, updating their profiles their status and anything else related with the user itself.
-
-\textbf{5. Group Layer}
-	This layer manages user groups for instance is this user a User, Author or Superuser.
-
-\textbf{6. Project Layer}
-	This layer handles all of the things to do with all of the research projects. Editing the meta data of documents and so forth.
-
-\textbf{7. System Layer}
-	This layer does the most basic system tasks. Management of organization of data and so forth.
-=======
-\subsubsection{Breakdown of different layers}
-\begin{itemize}
-\item \textbf{Presentation Layer} - This is the layer that contains physical pages and widgets through which the user can interact with the system. 
-
-\begin{itemize}
-\item Also known as the Front-end Layer
-\item In simple terms, it creates and displays the User Interface.
-\item Data that is shown is fetched from the Business Layer.
-\end{itemize}
-
-\item \textbf{Service Layer} - This serves as a bridge between the Presentation Layer and the Business Layer
-
-\begin{itemize}
-\item Application layer communicates with the Business Layer via this layer
-\item Third party services can be added in this layer i.e. Can be used to expose a web service API and return results as JSON/XML 
-\item Data is obtained from the Business Layer
-\end{itemize}
-
-\end{itemize}
-
-
->>>>>>> Stashed changes
 
 \newpage
 
