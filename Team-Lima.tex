@@ -157,9 +157,9 @@ The remainder of this document includes four more sections and is organized as f
 \newpage
 \section{Vision}
 \subsection{Product Functions}
-The main aim of this system is to assist researchers(authors) and head of department with storing metadata of research papers(not the paper itself). In the system the users will be able to see how many papers is that particular user working on,  identify which research papers  are due at what time(the system will keep a daily reminder of the due date) and who are the other author of the paper but will maintain privacy since a user won't be able to see other user's work(only going to see papers where the user co-author) unless it is the head of department or a supervisor.The system will keep a status of the paper(still working on it,submitted waiting for feedback,rejected, accepted,published or improving it after rejection).
-\newline The system should be able support 100 users concurrently without any difficulties.The head of department is allowed to see everything in the system meaning everyone's work. An author is not necessarily a user of the system meaning that a person can be added as one of the authors of a certain research paper, while they are not a user of the system, the primary author is responsible of adding and deleting authors for a paper and the primary should be a user of the system.
-\newline Every research paper on the system should have at least one user responsible for it. The system keeps the title of the paper, if a paper is accepted/published a link to where the actual paper is stored,if a paper is deleted in the system(by the primary author) a reason, should be provided for that termination, the type of a paper(journal, conference paper or book chapter) is also kept in the system, and the system should also keep report containing DoE Units, DoE Research Output Units,UPWeighted Research Outputs, Estimated DoE Outputs and Research Funding.
+The main aim of this system is to assist researchers(authors) and head of department with storing metadata of research papers(not the paper itself). In the system the users will be able to see how many papers a particular user is working on, identify which research papers are due at what time(the system will keep a daily reminder of the due date) and who are the other authors of the paper but will maintain privacy since a user won't be able to see other user's work(only going to see papers where the user co-author) unless it is the head of department or a supervisor/superuser. The system will keep a status of the paper(still working on it,submitted waiting for feedback,rejected, accepted, published or improving it after rejection).
+\newline The system should be able support 100 users concurrently without any difficulties. The head of department is allowed to see everything in the system meaning everyone's work. An author is not necessarily a user of the system meaning that a person can be added as one of the authors of a certain research paper, while they are not a user of the system, the primary author is responsible of adding and removing authors for a paper and the primary author should be a user of the system.
+\newline Every research paper on the system should have at least one user responsible for it. The system keeps the title of the paper, if a paper is accepted/published a link to where the actual paper is stored,if a paper is deleted in the system(by the primary author) a reason, should be provided for that termination, the type of a paper(journal, conference paper or book chapter) is also kept in the system, and the system should also keep report containing DoE Units, DoE Research Output Units, UPWeighted Research Outputs, Estimated DoE Outputs and Research Funding.
 
 \subsection{User classes and characteristics}
 \subsubsection{Head of Department}
@@ -177,7 +177,7 @@ The main aim of this system is to assist researchers(authors) and head of depart
 		\item Any number less than a hundred.
 		\item Able to see only the list papers of where is authoring or co-authoring.
 		\item Can add or delete papers.
-		\item Can add or delete authors.
+		\item Can add or remove authors.
 	\end{itemize}
 
 \subsubsection{Author}
@@ -192,11 +192,12 @@ The system will be a standalone system, it does not load any external module or 
 
 \newpage
 \section{Background}
-The system give  different authors/researchers who are working on the same paper an opportunity to be able to stay updated about the progress of the paper. The system also gives the head of department an opportunity to better supervise the staff members on the research  they are working on,since research is one of the crucial aspects of every department in the university. The system also gives the head of department an opportunity to evaluate the staff member using the report the system provides.
+The system gives different authors/researchers who are working on the same paper an opportunity to be able to stay updated about the progress of the paper. The system also gives the head of department an opportunity to better supervise the staff members on the research  they are working on, since research is one of the crucial aspects of every department in the university. The system also gives the head of department an opportunity to evaluate the staff member using the report the system provides.
 
 A correct usage of the system will yield good results in management of the department's research activity and will also provide a better way of co-authoring among different authors/users because when there is a change in the status of the paper every author and user will be made aware of the deadline.
 
 The system will also improve the current way of storing research metadata the department uses, which is  writing everything on a spreadsheet. The system will also add other things that are not in the spreadSheet like a full report of how the whole department is performing with regards to research papers and provide a more informed way of co-authoring, since everyone working on the paper will know what is going on.
+
 \newpage
 \section{Architecture requirements}
 \subsection{Access channel requirements}
@@ -344,8 +345,7 @@ This section discusses the application functionality required by users (and othe
 		\item The system needs to be able to handle 100 users concurrently and at the same time.
 		\item Only University of Pretoria staff members may register to become users.
 		\item Users are only allowed to see publications that they are involved in.
-		\item There should be a a superuser or root account for the Head of Department, the superuser should be able to see all research papers that is on the system.
-		\item There should be a a superuser or root account for the Head of Department, the superuser should be able to see all research projects that is on the system.
+		\item There should be a a superuser or root account for the Head of Department, the superuser should be able to see all research papers/projects that is on the system.
 		\item Users and authors should be able to upload their documents to the research project.
 	\end{itemize}
 
@@ -371,10 +371,10 @@ This section discusses the application functionality required by users (and othe
 
 \subsubsection{Nice-To-Have}
 \begin{itemize}
-\item There should be a checkbox that defaults users as authors for research papers that they administrate, if they are just administrating they should explicitly uncheck that they are not an author.
-\item There should be an indication of progress on research papers (progress bar/percentage indication of work done)
-\item Users should be able to search for authors if they have been stored in the system.
-	\end{itemize}
+	\item There should be a checkbox that defaults users as authors for research papers that they administrate, if they are just administrating they should explicitly uncheck that they are not an author.
+	\item There should be an indication of progress on research papers (progress bar/percentage indication of work done)
+	\item Users should be able to search for authors if they have been stored in the system.
+\end{itemize}
 
 
 	
