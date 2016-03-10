@@ -277,20 +277,21 @@ For the architecture pattern to be used as a base we will be using the layering 
 
 The reason for using the layering system is
 \begin{itemize}
-	\item It is highly pluggable ie. easy to replace a layer
+	\item It is highly pluggable ie. easy to replace a layer. This is a crucial part of the program as it has to be available on multiple platforms such as:
 	\begin{itemize}
 		\item Mobile application layer
 		\item Web page layer
-		\item Desktop application layer
 	\end{itemize}
 	\item Easier to do unit tests on as the other layers are easier to mock
+	\item Groups have members that have different programming skills. With this method of developing each member can focus on the task that they can perform the best and maybe even enjoy.
+	\item With this scheme an API is essentially created and can be used on any platform. 
 \end{itemize}
 
-For the presentation layer it will be easier to use MVC architecture in every platform (mobile application, web application, desktop application). Each MVC architecture will be a layer and interchanged for the desired platform.
-
-The reason for using MVC(Model View Controller)
+Drawbacks for using layering for this project
 \begin{itemize}
-
+	\item When changing lower layers of the system it impacts all layers above it. Therefor we should create solid base layers that do not need to be updated regularly.
+	\item The above point also raises the point of maintainence. Once a lower layer is updated it reflects all the way to the top layers.
+	\item Performance is impacted because of communication between layers but this simplifies the process of communicating between different top layers as there will be 2 different display or interaction layers.
 \end{itemize}
 
 \newpage
