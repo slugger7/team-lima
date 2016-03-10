@@ -273,7 +273,7 @@ To run the database we will be using mySQL and PHP. We will store the user profi
 To build the mobile application, we will use androidStudio(java). The mobile application should only be able to access the server when you are within the premises of the University.
 
 
-\section{Architecture tactics and strategies}
+\subsection{Architecture tactics and strategies}
 
 An architectural tactic is a way of satisfying a quality requirement measure by manipulating some aspects of a quality attribute model. It is also a design decision that impacts the control of a quality attribute response.
 
@@ -332,7 +332,9 @@ Tactics used for maintainability are:
 \begin{itemize}
 \item Hiding information, here we devide responsibities of functions into two main categories: public and private. Public responsibities will vary depending on the type of user, they will also be accessable to both developers and users. System administrator will able to see the private functions.
 
-\item D 
+\item Detecting attacks using event logging, to know where threat came from and also if it was a user.
+
+\item Maintain and check for attack signatures, so that we willknow exactly where the threats are coming from. 
 \end{itemize}
 
 
