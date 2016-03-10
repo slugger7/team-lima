@@ -275,6 +275,7 @@ To build the mobile application, we will use androidStudio(java). The mobile app
 \subsection{Architectural patterns or styles}
 For the architecture pattern to be used as a base we will be using the layering system.
 
+\subsubsection{Benifits}
 The reason for using the layering system is
 \begin{itemize}
 	\item It is highly pluggable ie. easy to replace a layer. This is a crucial part of the program as it has to be available on multiple platforms such as:
@@ -287,6 +288,7 @@ The reason for using the layering system is
 	\item With this scheme an API is essentially created and can be used on any platform. 
 \end{itemize}
 
+\subsubsection{Concerns}
 Drawbacks for using layering for this project
 \begin{itemize}
 	\item When changing lower layers of the system it impacts all layers above it. Therefor we should create solid base layers that do not need to be updated regularly.
@@ -295,6 +297,7 @@ Drawbacks for using layering for this project
 \end{itemize}
 
 \newpage
+
 \section{Functional requirements and application design}
 This section discusses the application functionality required by users (and other stakeholders).
 \subsection{Use case prioritization}
