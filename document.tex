@@ -271,6 +271,70 @@ To run the database we will be using mySQL and PHP. We will store the user profi
 
 To build the mobile application, we will use androidStudio(java). The mobile application should only be able to access the server when you are within the premises of the University.
 
+
+\section{Architecture tactics and strategies}
+
+An architectural tactic is a way of satisfying a quality requirement measure by manipulating some aspects of a quality attribute model. It is also a design decision that impacts the control of a quality attribute response.
+
+\subsubsection{Performance}
+
+Latancy is affeted by a various level of the demand for resources, in our system this includes event arrival rates, the execution time that comes from the event arrivals and also the variability level of each event.
+
+Tacticts for managing system demands:
+\begin{itemize}
+\item Manage and control the event rate, this includes how many times events are generated.
+
+\item Bound Execution time, in our system we need a way of limiting the exection time spent on each event so that resources can free up to allow other events to run.
+
+\item Increase the computational efficiency of the algorithm, this will reduce the demand for the processor time and improve latency.
+
+\item Dertermine the appropriate scheduling policy for our system, the most suited for this would be semantic-importance-based scheduling so that the system focuses it resources on the most significant work at the most significant time. We can also use fairness-based scheduling  which functions on the basis of FIFO.
+\end{itemize}
+\subsubsection{Flexibility} 
+
+The responsibility of the functions that will be created will imoact the cost of making a change in the system, some changes can affect other function.
+ 
+The tactics used to improve flexibilty include:
+\begin{itemize}
+\item Raising the abstraction level, the more general functions are the easier it will be to use them on different platform of our system.
+
+\item Localize services that will be used by majority of the users
+\end{itemize}
+\subsubsection{Usability} 
+
+If a user is able to use the weba based version of the system they should be able to use the mobile application too.
+The tactics use to assist usablity are:
+\begin{itemize}
+\item Maintaining the same user interface across all boards.
+\item Keep a verysimple user interface that does not require a lot from the users.
+\end{itemize}
+\subsubsection{Integrability}
+
+The system being implemented will be usable from both the internet and mobile application.The tactics used for this will be:
+\begin{itemize}
+\item Layering, this will be implemented so that if a platform is already running we can simply build on top of it.
+\end{itemize}
+
+\subsubsection{Maintainability}
+
+For maintainablity of the system, we need to build the system such that when making changes to fuctions,we do not have to modify other functions that are not directly affected by these changes.
+
+Tactics used for maintainability are:
+
+\begin{itemize}
+\item Breaking the dependancy chain between functions, we will have to create a intermedairy to keep functions as independant as possible.
+
+\item Make data on the system self identifying, this just means tagging the data with identification, like descriptions to allow other developers to work on the system too.
+\end{itemize}
+\subsubsection{Security}
+
+\begin{itemize}
+\item Hiding information, here we devide responsibities of functions into two main categories: public and private. Public responsibities will vary depending on the type of user, they will also be accessable to both developers and users. System administrator will able to see the private functions.
+
+\item D 
+\end{itemize}
+
+
 \newpage
 \section{Functional requirements and application design}
 This section discusses the application functionality required by users (and other stakeholders).
