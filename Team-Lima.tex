@@ -416,6 +416,52 @@ Tactics used for maintainability are:
 	
 	
 \end{itemize}
+\subsection{Reference Architecture}
+\subsubsection{Java-EE Reference Architecture}
+The aim of the java-EE platform is to provide developers with a powerful set of APIs while shortening development time,reducing application complexity, and improving application performance.
+
+\paragraph{Application Server}
+Component at first level of granularity.
+
+\textbf{Pattern}: Layering
+\begin{itemize}
+\item Access layer: web container,message queues
+\item Business processes layer: EJB container
+\item Persistence layer: Persistence context
+\end{itemize}
+
+\textbf{Tactics}:
+Clustering for scalability,availability and reliability
+\begin{itemize}
+\item All layer elements
+\item JNDI repositories
+\item Load balancers, firewalls,DBs
+\end{itemize}
+JMX for management and monitoring
+
+\textbf{Application concepts}
+\begin{itemize}
+\item None at this level of granularity
+\end{itemize}
+
+\paragraph{Application development concepts and constraints}
+\begin{itemize}
+\item Pattern constraining application logic
+\item Concepts for application development
+\item Constraints for application development
+\item Strategies for applicaion logic
+\end{itemize}
+
+\paragraph{Quality Attributes of Java-EE}
+\begin{itemize}
+\item Good Scalability
+\item Good Reliability 
+\item Average Flexibility
+\item Average Performance
+\item Auditability is not directly supported
+\item Good Security
+\item Quite good Integrability
+\end{itemize}
 \newpage
 \section{Functional requirements and application design}
 This section discusses the application functionality required by users (and other stakeholders).
