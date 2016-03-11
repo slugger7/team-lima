@@ -1,5 +1,4 @@
 #LaTex ignores
-*.pdf
 *.out
 *.idx
 *.aux
