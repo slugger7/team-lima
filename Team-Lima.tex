@@ -205,69 +205,78 @@ The system will also improve the current way of storing research metadata the de
 
 There will be two access channels for the proposed system. An Android application client will be used to fetch data (such as the deadline dates) and integrate it into mobile devices for users to easily identify when their deadlines are. The mobile application will also allow a user to search for and identify the type of publication (journal, conference paper or book) that is being worked on as well as how many papers a user may be working on. The mobile application will also allow users to see the working status of a paper (still working on it, submitted and waiting for feedback, rejected, accepted, published or improving after rejection).
 Web servers will be used in order to store all the users and their details as well as all the papers that are being worked on by any particular user. These web servers will be set up so that they can be concurrently accessed by 100 users without any difficulties. The system will also make due with browser clients that will have all the same functionality as the mobile client and allow any user to access the system where ever they may be. Both the mobile application and browser client will interact with the web server in order to gain access to any information they might need. 
->>>>>>> Stashed changes
+
+\subsubsection{4.1.1 Architectural Scope}
 
 
-\subsection{Quality requirements}
+\subsubsection{4.1.2 Quality Requirements}
 
 
 In order to create a safe and legitimate system that will meet all the specifications of the project, some system requirements such as how the system performance, security, flexiblity, maintainability, auditablity, integrability, cost and usabilty have to be considered.
+\begin{itemize}
 
-\subsubsection{Performance} 
+\item \subsubsection*{Performance} 
 
 The system has to stable and responsive enough to handle up to one hundred users without lagging, that is the system's response time must prove to be exceptional no matter the work. 
 
-\subsubsection{Security}
+\item \subsubsection*{Security}
 
-The most important security measure that needs to held in this system is that only U.P staff are allowed to register as users, and may be the only member who can access the link to view papers. They will either set their own usernames or use their access card numbers in place of their usernames. They will also be required to set their own passwords. This password should be at least eight characters long to make it a bit more difficult for potential hackers to gain access.If a user forgets his/her password, there will need to be a way of retrieving it or re-setting a new one. My group and I decided that an email containing a link should be sent out to a user directing them to a page whereby they will be able to set a new password. If a user also fails to get the correct password for more than three tries, the user account should be blocked for safety reasons, and the user should be sent an email following the password re-setting procedure. If system fails to allow a user back into the system, the user needs to direct an enquiry to the administative user.
-The user also is given the power to remove or add authors the a paper, they may also choose to terminate the paper and should also be given access to revive that same paper that was terminated by them. Only users involved in the publication can edit a paper, this modification must be known by the other users involved in the same paper, so some system of alerting co-users about the modification. The system will also have user profiles, a user can only edit their own profile. The system also has super-users that have more control then users, they can access all publications. There are alos administrative users and control who has access the the system.The administrative users basically can  remove or add users to the system, they also fix any problems regarding users. They can also view the activities of a particular user and because of this, all user activity must be logged. The hierarchy of this system in terms of privilege is tha tadministrative users have the most priority, super-users have the more authority than users and finally authors have the least aauthority.
+The most important security measure that needs to be upheld in this system is that only U.P staff should be allowed to register as users, and may be the only members who can access the link to view papers. They will either set their own usernames or use their access card numbers in place of their usernames. They will also be required to set their own passwords. This password should be at least eight characters long to make it a bit more difficult for potential hackers to gain access.If a user forgets his/her password, there will need to be a way of retrieving it or re-setting a new one. My group and I decided that an email containing a link should be sent out to a user directing them to a page whereby they will be able to set a new password. If a user also fails to get the correct password for more than three tries, the user account should be blocked for safety reasons, and the user should be sent an email following the password re-setting procedure. If system fails to allow a user back into the system, the user needs to direct an enquiry to the administrative user.
+The user is also given the authority to remove or add authors to the a paper, they may also choose to terminate the paper and should also be allowed to revive that same paper that was terminated. Only users involved in the publication can edit a paper, this modification must be known by the other users involved in the same paper, so a notification method will be set up to alert the other members. The system will also have user profiles, a user can only edit their own profile. The system also has super-users that have more control than users, they can access all publications. There are also administrative users who have access to the the system.The administrative users can basically remove or add users to the system. Their main role is to fix any administrative problems that may be faced by the users. They can also view the activities of a particular user and because of this, all user activity must be logged. The hierarchy of this system in terms of privilege is that administrative users have the most priority, super-users have the more authority than users and finally authors have the least authority.
 
-\subsubsection{Reliability}
+\item \subsubsection{Reliability}
 
-Reliability for this application to work is crucial to its success. If a user wants to access a paper and it is urgent, the user must always be able to access what they have access to at all times without the system failing fetch the information the user seeks. Reliability includes keeping track of user authority, the system cannot ever loose track of what actions each user can perform on the system. Super-users must be able to do all their administrative jobs, if that could fail then they would nit be able to keep track of user activity and the application. 
+Reliability for this application to work is crucial to its success. If a user wants to access a paper and it is urgent, the user must always be able to access what they have access to at all times without the system failing fetch the information the user seeks. Reliability includes keeping track of user authority, the system should not lose track of what actions each user can perform on the system. Super-users must be able to oversee all publications at all times, if that failed for some reason and inaccurate publication statuses were presented or incorrect co-authors were placed into a group super-users would not be able to keep track of user activity and the application's reliability would be flawed. 
 
-\subsubsection{Flexibility}
+\item \subsubsection{Flexibility}
 
-This application should be web-based and should also have a mobile application that users can make use of when away from a desktop or laptop. The system needs to be able to run the same on all these platforms and users must be able to do the same things on the web-based application and mobile-based application. For the mobile side of things, this application needs to be able to support older versions of android mobile system, so that no matter the device is used, a user can access the application and look up what they need at all times.
+This application should be web-based and also have a mobile application that users can make use of when away from a desktop or laptop. The system needs to be able to run the same on all these platforms (with the exception of probably having different User Interfaces for the two platforms) and users must be able to do the same things on the web-based application and mobile-based application. For the mobile side of things, this application needs to be able to support older versions of android mobile system, so that no matter what device is used, a user can access the application and look up what they need at all times.
 
-\subsubsection{Maintainability}
+\item \subsubsection{Maintainability}
 
 Maintenance of this application will be handled by the super-users. With just a little over one hundred users this system will have to be well maintained to be able to run things smoothly.
 
-\subsubsection{Monitorability}
+\item \subsubsection{Monitorability}
 
-The super-users will be in charge of monitoring users activity. Since there will be a log for each users activity on the system, the super user can look at the log to see what a specific user has been doing. Everything in the system will be logged to increase the level of monitorability.
+The super-users will be in charge of monitoring user activity. Since there will be a log for each users activity on the system, the super-user can look at the log to see what a specific user has been doing. Everything in the system will be logged to increase the level of monitorability.
 
-\subsubsection{Usability}
+\item \subsubsection{Usability}
 
-This application should be simple enough for a user to use without the user asking for assistance more than once. The system must have basic instruction, maybe given to the user on a basic pdf file that they can read and understand how to navigate the system. If users still do not have a clear perspective on how the system works they will just keep referring to the pdf.
+This application should be simple enough for a user to use without the user asking for assistance more than once. The system must have basic instructions, that could perhaps be made available to a user on a pdf file so that they can read and understand how to navigate through the system. If users still do not have a clear perspective on how the system works they will just keep referring to the pdf.
 
-\subsubsection{Cost}
+\item \subsubsection{Cost}
 
 The system being built should be complex enough to run smoothly on all devices but also it should be maintainable by students to cut costs and man hours.
 
-\subsubsection{Integrability}
+\item \subsubsection{Integrability}
 
 The system should be integrable to mobile devices and not just be web-based. There will be a mobile application for this system.
+\end{itemize}
 
 
-\subsection{Architecture constraints}
+\subsubsection{4.1.3 Integration And Access Channel Requirements}
 
-The server should be available at all times to allow all users to login at any time. There should be search functionality to allow users to navigate faster.The system will be web-based and will also built to to run on mobile devices.
 
-\subsubsection{Web-based development}
+ 
+\subsubsection{4.1.4 Architecture constraints}
+
+The server should be available to allow all users to login at any time. There should be search functionality to allow users to navigate faster.The system will be web-based and will also built to to run on mobile devices.
+\begin{itemize}
+\item \subsubsection{Web-based development}
 
 We will be building the web-based system using HTML, CSS, and some javascript for some user side functionality. We will do all client validation using javascript to check if the user input is valid.  
 
-\subsubsection{Server-side development}
+\item \subsubsection{Server-side development}
 
 To run the database we will be using mySQL and PHP. We will store the user profile using a mySQL database and use, and all validation will be done in PHP.
 
 
-\subsubsection{Mobile application development}
+\item \subsubsection{Mobile application development}
 
 To build the mobile application, we will use androidStudio(java). The mobile application should only be able to access the server when you are within the premises of the University.
+\end{itemize}
 
+\newpage
 \subsection{Architectural patterns or styles}
 For the architecture pattern to be used as a base we will be using the layering system.
 
@@ -329,27 +338,27 @@ Drawbacks for using layering for this project
 	\end{itemize}
 \end{enumerate}
 
-\subsection{Architecture tactics and strategies}
+\subsection{Architecture tactics or strategies}
 
 An architectural tactic is a way of satisfying a quality requirement measure by manipulating some aspects of a quality attribute model. It is also a design decision that impacts the control of a quality attribute response.
 
 \subsubsection{Performance}
 
-Latancy is affeted by a various level of the demand for resources, in our system this includes event arrival rates, the execution time that comes from the event arrivals and also the variability level of each event.
+Latency is affected by a various level of the demand for resources, in our system this includes event arrival rates, the execution time that comes from the event arrivals and also the variability level of each event.
 
 Tactics for managing system demands:
 \begin{itemize}
 \item Manage and control the event rate, this includes how many times events are generated.
 
-\item Bound Execution time, in our system we need a way of limiting the exection time spent on each event so that resources can free up to allow other events to run.
+\item Bound Execution time, in our system we need a way of limiting the execution time spent on each event so that resources can free up to allow other events to run.
 
 \item Increase the computational efficiency of the algorithm, this will reduce the demand for the processor time and improve latency.
 
-\item Dertermine the appropriate scheduling policy for our system, the most suited for this would be semantic-importance-based scheduling so that the system focuses it resources on the most significant work at the most significant time. We can also use fairness-based scheduling  which functions on the basis of FIFO.
+\item Determine the appropriate scheduling policy for our system, the most suited for this would be semantic-importance-based scheduling so that the system focuses it resources on the most significant work at the most significant time. We can also use fairness-based scheduling  which functions on the basis of FIFO.
 \end{itemize}
 \subsubsection{Flexibility} 
 
-The responsibility of the functions that will be created will imoact the cost of making a change in the system, some changes can affect other function.
+The responsibility of the functions that will be created will impact the cost of making a change in the system, some changes can affect other function.
  
 The tactics used to improve flexibilty include:
 \begin{itemize}
@@ -412,22 +421,12 @@ Tactics used for maintainability are:
 	
 	
 \end{itemize}
-\subsection{Reference Architecture}
+
+
+\subsection{Use Of Reference Architectures And Frameworks}
 \subsubsection{Java-EE Reference Architecture}
 The aim of the java-EE platform is to provide developers with a powerful set of APIs while shortening development time,reducing application complexity, and improving application performance.
 
- \section{Access and Integration channels}
- \subsection{Integration requirements}
-
-The main integration channel that will be used in the system is the database which will allow users to access to external systems either via the mobile application or the browser client. An EAI system can be used to participate in concurrent integration operations at any one time.
-Security plays a vital role in the integration channels as unauthorised authors may not see, contribute or change documents while heads of departments or supervisors have the authority to see the papers being worked on.
-The integration channel has to be reliable as papers that are being worked on are of utmost importance and would be detrimental to all those involved in the papers if something were to happen to them. The system must keep all documents secure and accounted for.
-\subsection{Access channels}
-
-There will be multiple access channels for the proposed system. Mobile/android application clients will be used to fetch data(such as the deadline dates) and integrate them into mobile device for users to easily be able to identify when their deadlines are  for. 
-The mobile application will also allow a user to search for and identify the type of paper(journal, conference paper or book) that is being worked on as well as how many papers a user may be working on. The mobile application will also allow users to see the status of a paper(still working on it, submitted and waiting for feedback, rejected, accepted, published or improving after rejection).
-Web services will be used in order to store all the users and their details as well as all the papers that are being worked on by any particular user. These web services will be set up such that 100 users can concurrently access the server without any difficulties. 
-The system will also make due with browser clients that will have all the same functionality as the mobile client and allow any user to access the system where ever they may be. Both the mobile application and browser client will interact with the web server in order to gain access to any information it might need. 
 
 \paragraph{Application Server}
 Component at first level of granularity.
@@ -471,7 +470,22 @@ JMX for management and monitoring
 \item Good Security
 \item Quite good Integrability
 \end{itemize}
-\subsection{Frameworks}
+
+\subsection{Access and integration channels}
+\subsubsection{Integration requirements}
+
+The main integration channel that will be used in the system is the database which will allow users to access to external systems either via the mobile application or the browser client. An EAI system can be used to participate in concurrent integration operations at any one time.
+Security plays a vital role in the integration channels as unauthorised authors may not see, contribute or change documents while heads of departments or supervisors have the authority to see the papers being worked on.
+The integration channel has to be reliable as papers that are being worked on are of utmost importance and would be detrimental to all those involved in the papers if something were to happen to them. The system must keep all documents secure and accounted for.
+
+\subsubsection{Access channels}
+
+There will be multiple access channels for the proposed system. Mobile/android application clients will be used to fetch data(such as the deadline dates) and integrate them into mobile device for users to easily be able to identify when their deadlines are  for. 
+The mobile application will also allow a user to search for and identify the type of paper(journal, conference paper or book) that is being worked on as well as how many papers a user may be working on. The mobile application will also allow users to see the status of a paper(still working on it, submitted and waiting for feedback, rejected, accepted, published or improving after rejection).
+Web services will be used in order to store all the users and their details as well as all the papers that are being worked on by any particular user. These web services will be set up such that 100 users can concurrently access the server without any difficulties. 
+The system will also make due with browser clients that will have all the same functionality as the mobile client and allow any user to access the system where ever they may be. Both the mobile application and browser client will interact with the web server in order to gain access to any information it might need. 
+
+\subsection{Technologies}
 \subsubsection{CodeIgniter}
 As we are using PHP for server work, we will be using CodeIgniter as a framework to handle the server side of the work. This is to empower the back-end of the model.
 
