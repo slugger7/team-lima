@@ -200,16 +200,23 @@ The system will also improve the current way of storing research metadata the de
 
 \newpage
 \section{Architecture requirements}
+<<<<<<< Updated upstream
+=======
+\subsection{Access channel requirements}
+
+There will be two access channels for the proposed system. An Android application client will be used to fetch data (such as the deadline dates) and integrate it into mobile devices for users to easily identify when their deadlines are. The mobile application will also allow a user to search for and identify the type of publication (journal, conference paper or book) that is being worked on as well as how many papers a user may be working on. The mobile application will also allow users to see the working status of a paper (still working on it, submitted and waiting for feedback, rejected, accepted, published or improving after rejection).
+Web servers will be used in order to store all the users and their details as well as all the papers that are being worked on by any particular user. These web servers will be set up so that they can be concurrently accessed by 100 users without any difficulties. The system will also make due with browser clients that will have all the same functionality as the mobile client and allow any user to access the system where ever they may be. Both the mobile application and browser client will interact with the web server in order to gain access to any information they might need. 
+>>>>>>> Stashed changes
 
 
 \subsection{Quality requirements}
 
 
-In order to create a safe and legitimate system that will meet all the specifications of the project, some system requirements such as how the system performance, security, flexiblity, maintainability, auditablity, integrability, cost and usabilty.
+In order to create a safe and legitimate system that will meet all the specifications of the project, some system requirements such as how the system performance, security, flexiblity, maintainability, auditablity, integrability, cost and usabilty have to be considered.
 
 \subsubsection{Performance} 
 
-The system has to responsive, and responsive enough to handle up to one hundred users and not lag, the system must also be perform in such a way that if certain authors responsible for a paper want to access it at the same time them can without the system slowing down.
+The system has to stable and responsive enough to handle up to one hundred users without lagging, that is the system's response time must prove to be exceptional no matter the work. 
 
 \subsubsection{Security}
 The most important security measure that needs to held in this system is that only U.P staff are allowed to register as users, and may be the only member who can access the link to view papers. They will either set their own usernames or use their access card numbers in place of their usernames. They will also be required to set their own passwords. This password should be at least eight characters long to make it a bit more difficult for potential hackers to gain access.If a user forgets his/her password, there will need to be a way of retrieving it or re-setting a new one. My group and I decided that an email containing a link should be sent out to a user directing them to a page whereby they will be able to set a new password. If a user also fails to get the correct password for more than three tries, the user account should be blocked for safety reasons, and the user should be sent an email following the password re-setting procedure. If system fails to allow a user back into the system, the user needs to direct an enquiry to the administative user.
