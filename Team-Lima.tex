@@ -515,23 +515,37 @@ Web services will be used in order to store all the users and their details as w
 The system will also make due with browser clients that will have all the same functionality as the mobile client and allow any user to access the system where ever they may be. Both the mobile application and browser client will interact with the web server in order to gain access to any information it might need. 
 
 \subsection{Technologies}
-Deciding on the technologies to be used with this project is vital, though there is many way in which to perform the same task, choosing the right tools makes it that much easier to achieve one's goal. The project's technologies can be subdivided into 3 major categories, namely: the back end, the front end and finally the mobile application (Android).
+Deciding on the technologies to be used with this project is vital, though there are many ways in which to perform the same task, choosing the right tool for the job makes it that much easier to achieve one's goal. The project's technologies can be subdivided into 3 major categories, namely: server-side back end, website front end and finally the Android mobile application.
 
-\subsubsection{Front End}
-Technologies to be utilized in the Front End is:
+\subsubsection{Website Front End Technologies}
 \begin{itemize}
-\item HTML 5 - Defines the structure and content of the website
-\item CSS3 - Styles the website as well as provide some of the animations to be used
-\item SCSS - A flavour of SASS, though optional since CSS3 is present but should be utilized and converted to CSS3 when deploying the project
+\item HTML 5 - Defines the structure and content of the website.
+\item CSS3 - Styles the website as well as provide some of the animations to be used.
+\item SCSS - A flavour of SASS, though optional since CSS3 is present but should be utilized and converted to CSS3 when deploying the project.
 \item Javascript - Provides functionality for the website, will be used with JSON using AJAJ to dynamically update the page while fetching from the server. 
 \item jQuery library - Will be utilized to simplify the Javascript being used. 
 \end{itemize}
+These form the standard modern day HTML5 web technologies used for the front end. 
 
-\subsubsection{Back End}
-LAMP (Linux, Apache, MySQL, PHP) will be the back end of choice. We require reliability, performance and security. LAMP is the choice here since it is a tried and tested technologies with few vulnerabilities which newer development stacks may have. For the system to reduce cost, students will be used to maintain it. Since most students are familiar with LAMP technologies, it is thus even better suited for the job.
+\subsubsection{Server-side Back End Technologies}
+\begin{itemize}
+\item Linux - Operating system that will be used to host the website and back end of the service.
+\item Apache - The web server.
+\item MySQL - SQL database used to store data and will be queried for information.
+\item PHP - Server scripting language used to interact.
+\item MongoDB - NoSQL database which might be used on top of MySQL.
+\item CodeIgniter - Lightweight MVC framework for rapid development of web applications.
+\end{itemize}
+LAMP (Linux, Apache, MySQL, PHP) will be the back end of choice. We require reliability, performance and security. LAMP is a tried and tested technologies with fewer vulnerabilities compared to newer back end stacks. This is of great interest when security is key. For the system to reduce cost, students will be used to maintain it. Since most students are familiar with LAMP technologies, it is thus even better suited for the job.
 
-\subsubsection{Mobile App}
-There are 3 possible types of Android apps which can be build. For this project a native Android app will built. Native apps offer the best performance and best user interface compared to the other types. This is especially important when scalability is a factor and presenting the content correctly. As this will be a native app, Java will be used as the programming language.\newline\newline The GSON library will be used to convert between Java objects and JSON representations and visa versa. Also 2 frameworks will be used in conjunction to perform dependency injection, namely Butter Knife and Dagger.
+\subsubsection{Android Mobile Application Technologies}
+\begin{itemize}
+\item Java EE - Programming language with APIs to be used.
+\item GSON - Library for converting between Java Objects and JSON representations
+\item RoboGuice - Dependency Injection framework for Android
+\item Gradle - Build system to allow for more robust, well defined builds
+\end{itemize}
+There are 3 possible types of Android applications which can be built. For this project a native Android application will be built. Native applications offer the best performance and the best user interface compared to the other types. This is especially important when scalability is a factor and presenting the content correctly. As this will be a native application, Java will be used as the programming language.\newline\newline The GSON library will be used to convert between Java objects and JSON representations and visa versa which will be useful when communicating with the web server on campus.
 
 \newpage
 \section{Functional requirements and application design}
