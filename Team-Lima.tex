@@ -248,13 +248,6 @@ The system being built should be complex enough to run smoothly on all devices b
 The system should be integrable to mobile devices and not just be web-based. There will be a mobile application for this system.
 
 
-\subsection{Integration requirements}
-
-The main integration channel that will be used in the system is the internet which will allow users to access the web servers either via the mobile application or the browser client. An EAI system can be used to participate in concurrent integration operations at any one time.
-Security plays a vital role in the integration requirements as unauthorised authors may not see, contribute or change documents while heads of departments or supervisors have the authority to see the papers being worked on.
-The integration has to be reliable as papers that are being worked on are of utmost importance and would be detrimental to all those involved in the papers if something were to happen to them. The system must keep all documents secure and accounted for.
-The scalability of the system should be implemented in such a way that it does not effect the performance of the system. This means that as the number of users grow access to the servers and documents should not be slowed in any way
-
 \subsection{Architecture constraints}
 
 The server should be available at all times to allow all users to login at any time. There should be search functionality to allow users to navigate faster.The system will be web-based and will also built to to run on mobile devices.
@@ -341,7 +334,7 @@ An architectural tactic is a way of satisfying a quality requirement measure by 
 
 Latancy is affeted by a various level of the demand for resources, in our system this includes event arrival rates, the execution time that comes from the event arrivals and also the variability level of each event.
 
-Tacticts for managing system demands:
+Tactics for managing system demands:
 \begin{itemize}
 \item Manage and control the event rate, this includes how many times events are generated.
 
@@ -419,6 +412,14 @@ Tactics used for maintainability are:
 \subsection{Reference Architecture}
 \subsubsection{Java-EE Reference Architecture}
 The aim of the java-EE platform is to provide developers with a powerful set of APIs while shortening development time,reducing application complexity, and improving application performance.
+
+ \subsection{Access and Integration channels}
+ \subsection{Integration requirements}
+
+The main integration channel that will be used in the system is the internet which will allow users to access the web servers either via the mobile application or the browser client. An EAI system can be used to participate in concurrent integration operations at any one time.
+Security plays a vital role in the integration requirements as unauthorised authors may not see, contribute or change documents while heads of departments or supervisors have the authority to see the papers being worked on.
+The integration has to be reliable as papers that are being worked on are of utmost importance and would be detrimental to all those involved in the papers if something were to happen to them. The system must keep all documents secure and accounted for.
+The scalability of the system should be implemented in such a way that it does not effect the performance of the system. This means that as the number of users grow access to the servers and documents should not be slowed in any way
 
 \paragraph{Application Server}
 Component at first level of granularity.
